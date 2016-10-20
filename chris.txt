@@ -1,0 +1,12 @@
+Check for a and b values for topic modelling.
+Wordnet:
+	
+How imporove LDA code.
+
+Which tools used for summarization.
+
+alpha: IT is document topic density. A more than more topics.
+
+Beta: topic word density. 
+
+

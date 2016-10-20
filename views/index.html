@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<script type="text/javascript" src="javascripts/lib/jquery-1.11.2.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCilGU2swDNBmbAMQAet4MK8zZj7v7pCE&libraries=visualization"></script>
+	<script type="text/javascript" src="javascripts/lib/markerclusterer.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="javascripts/index.js"></script>
+</head>
+
+<body>
+<div id="map-canvas"></div>
+<div id="settings-container">
+	<div class="row">
+	<div class="col-lg-3 col-lg-offset-8">
+	<div id="filter" class="input-group">
+		<input id="filterInput" type="text" class="form-control" placeholder="Key words...separate by space">
+		<span class="input-group-btn">
+			<button id="filterBtn" class="btn btn-default" type="button">Filter!</button>
+		</span>
+	</div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-lg-3 col-lg-offset-8">
+		<div id="viz" class="checkbox">
+			<label><input id="heatmapCbox" type="checkbox" value="" checked>HeatMap</label>
+			<label><input id="markerclusterCbox" type="checkbox" value="" checked>MarkerCluster</label>
+		</div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-lg-3 col-lg-offset-8">
+		<div id="sent" class="checkbox">
+				<label><input id="posCbox" type="checkbox" value="" checked>Positive</label>
+				<label><input id="negCbox" type="checkbox" value="" checked>Negative</label>
+				<label><input id="neuCbox" type="checkbox" value="" checked>Neutral</label>
+		</div>
+	</div>
+	</div>
+
+	<div class="row">
+	<div class="col-lg-1 col-lg-offset-8">
+		<span class="label label-warning">positive: <span id="pos-num">0</span></span>
+	</div>
+	<div class="col-lg-1">
+		<span class="label label-info">negative: <span id="neg-num">0</span></span>
+	</div>
+	<div class="col-lg-1">
+		<span class="label" style="background-color:#ff0000">neutral: <span id="neu-num">0</span></span>
+	</div>
+	</div>
+
+	<br>
+	<div class="row">
+	<div class="col-lg-3 col-lg-offset-8">
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseSentimentTrend" aria-expanded="false" aria-controls="collapseSentimentTrend" id="trendBtn">
+			Sentiment Trend
+		</button>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-lg-1 col-lg-offset-8">
+		<span class-"label" style="background-color:#ffffff; width: 200px;">Trends: <textarea rows="10" cols="50" id="trends"></textarea></span>
+	</div>
+	</div>
+	<br>
+	<div class="row">
+	<div class="col-lg-3 col-lg-offset-8 collapse" id="collapseSentimentTrend">
+		<div id="sentimentTrendChart">
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>

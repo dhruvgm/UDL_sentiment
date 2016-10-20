@@ -1,0 +1,56 @@
+/*body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}*/
+
+html, body, #map-canvas {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#settings-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	margin: 0;
+	padding: 100px;
+	pointer-events: none;
+}
+
+#filter, #viz, #trendBtn, #collapseSentimentTrend, #sent {
+	pointer-events: auto;
+}
+
+#collapseSentimentTrend {
+	background-color: #e8e8e8;
+}
+
+#sentimentTrendChart {
+	text-align: center;
+}
+
+#sentimentTrendChart svg {
+	font: 10px sans-serif;
+}
+
+#sentimentTrendChart .axis path, #sentimentTrendChart .axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: auto;
+}
+
+#sentimentTrendChart .axis text {
+	font-size: 12px;
+}
+
+#sentimentTrendChart .line {
+	fill: none;
+	stroke: #000;
+	stroke-width: 1.5px;
+}
