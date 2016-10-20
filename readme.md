@@ -8,3 +8,10 @@ The map clusters tweets as to show where people are tweeting the most, according
 * Make a call to the sentiment API off your preference (e.g. Alchemy). This can return a positive or negative sentiment evaluation for the text of the submitted Tweet.
 * As soon as the tweet is processed send a notification -using SNS- to an HTTP endpoint that will update the UI with the new information about the Tweet.
 * Using this information your application should display the Tweet clusters and the overall sentiment.
+
+
+To-DO:
+Visualization to be done. 
+Generate better graphs.
+Run on entire twitter data-set.
+Created by: Dhruv Motwani and Laura Uguccioni for Urban Design Lab at Columbia
